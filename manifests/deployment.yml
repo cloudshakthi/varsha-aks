@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudshakthivarshaaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshakthivarshaaks
+  template:
+    metadata:
+      labels:
+        app: cloudshakthivarshaaks 
+    spec:
+      containers:
+        - name: cloudshakthivarshaaks 
+          image: acr211123.azurecr.io/cloudshakthivarshaaks
+          ports:
+          - containerPort: 8080
